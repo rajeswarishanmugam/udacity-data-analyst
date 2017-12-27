@@ -1,0 +1,377 @@
+Python OSM Analysis - Udacity - Rajeswari Shanmugam
+===== Count of tags in OSM file =====
+{'bounds': 1,
+ 'member': 864,
+ 'nd': 525604,
+ 'node': 424009,
+ 'osm': 1,
+ 'relation': 291,
+ 'tag': 115707,
+ 'way': 96484}
+===== Regex analysis for lower,lower_colon,other and problem chars of tags in OSM file =====
+{'lower': 112471, 'lower_colon': 2818, 'other': 417, 'problemchars': 1}
+===== Process OSM file and count the users =====
+569
+===== Dictonory of all Chennai street types =====
+{'600042': {'Baby Nagar, Velachery, Chennai, Tamil Nadu 600042'},
+ 'Adambakkam': {'City Link Road, N.G.O. Colony, Ganesh Nagar, Adambakkam'},
+ 'Adyar': {'11th Cross Street, Shastri Nagar, Adyar',
+           '1st Canal Cross Road, Gandhi Nagar, Adyar, Gandhi Nagar, Adyar',
+           '2nd Avenue, Indira Nagar, Adyar',
+           '2nd Avenue, Indira Nagar, Adyar, Chennai - 600, 020, Indira Nagar, '
+           'Adyar',
+           '4th Main Road, Gandhi Nagar, Adyar',
+           'Gandhi Mandapam, Sardar Patel Road, Adyar',
+           'Indira Nagar 1st Main Rd, Indira Nagar, Adyar',
+           'Mahatma Gandhi Rd, Subramaniam Colony, Adyar'},
+ 'Adyar,': {'4th Main Road, Kasthuriba Nagar, Adyar, Kasturba Nagar, Adyar,'},
+ 'Alwarpet': {'Kavingar Barathidasan Road, Alwarpet', 'Alwarpet'},
+ 'Ave': {'14th Ave',
+         '8th Ave',
+         'Alumni Ave',
+         'Hostel Ave',
+         'Indira Nagar 1st Ave'},
+ 'Bridge': {'Maduvankarai Bridge'},
+ 'Chennai': {'3rd St, Ragavan Colony, Mettuppalayam, Ashok Nagar, Chennai',
+             'Balu St, Kamaraj Nagar, Thiruvanmiyur, Chennai',
+             'Gandhi Nagar, MGR Nagar, Venkateswara Nagar, Velachery, Chennai',
+             'Vandikaran St, Kuilkuppam, Velachery, Chennai',
+             'Velachery Road, Velachery, Chennai'},
+ 'Colony': {'Nathan Subramaniam Colony'},
+ 'East': {'Canal Bank Road, CIT Nagar East'},
+ 'Ekkatuthangal': {'Jawaharlal Nehru Rd, Balaji Nagar, Ekkatuthangal'},
+ 'Extension': {'Kamatchipuram 2nd Street Extension'},
+ 'Extn': {'6th Main Road Ram Nagar (N) Extn'},
+ 'Extn.': {'Umapathy street Extn.'},
+ 'Guindy': {'Defence Officers Colony Nandambakkam Extension Guindy',
+            'Five furlong road, Maduvankarai, Guindy',
+            'Parthasarathy St, Arulayiammanpet, Thiru Vi Ka Industrial Estate, '
+            'Guindy',
+            'Sardar Patel Rd, Little Mount, Guindy',
+            'Sengani Amman Koil St, Mosque Colony, Maduvinkarai, Guindy'},
+ 'Highway': {'Mount Poonamallee Highway'},
+ 'J.N.ROAD': {'J.N.ROAD'},
+ 'Jafferkhanpet': {'Third Street, Raghavan Colony, Jafferkhanpet'},
+ 'Kotturpuram': {'New Street, Kotturpuram'},
+ 'Madipakkam': {'5th Cross Street, Govindsamay Nagar, Madipakkam'},
+ 'Mambalam': {'Bakthavachalam Street, West Mambalam',
+              'Nakkeeran St #8, West Mambalam',
+              'New Street, West Mambalam'},
+ 'Meenambakkam': {'Meenambakkam'},
+ 'Mount': {'St. Thomas Mount'},
+ 'Mugalivakkam': {'Mugalivakkam'},
+ 'Mylapore': {'Warren Road, Mylapore'},
+ 'Nadu': {'Kalakshetra Rd, Valluvar Nagar, Thiruvanmiyur, Chennai, Tamil Nadu'},
+ 'Nagar': {'11th Avenue, Ashok Nagar',
+           '46th Street, Lakshmi Nagar',
+           '92nd St, 18th avenue, Ashok Nagar',
+           'Dr.Seetharaman Nagar',
+           'Jawaharlal Nehru Street, Ashok Nagar',
+           'K.P.K. Salai, Kanaga Durgai Nagar',
+           'Mathias Nagar',
+           'Sivagnanam Street, T Nagar',
+           'Veerappa Nagar',
+           'opp. Hotel Saravana Bhavan,Anna Main Road, K K Nagar'},
+ 'Nandambakkam': {'Karumariamman Koil St, Poonthottam Colony, Nandambakkam'},
+ 'Nandanam': {'Turnbulls Road, Nandanam'},
+ 'Nanganallur': {'4th Main Road, Nanganallur',
+                 '6th Main Road, Nanganallur',
+                 'Nanganallur'},
+ 'Nesapakkam': {'Govindasami St, MGR Nagar, Nesapakkam'},
+ 'PERUNGUDI': {'PERUNGUDI'},
+ 'Park': {'Panagal Park'},
+ 'Pudur)': {'3rd Avenue, Ashok Nagar (Pudur)'},
+ 'Puzhithivakkam': {'10th street Ram nagar north extn, Puzhithivakkam'},
+ 'Puzhuthivakkam': {'10th Street, Ram  Nagar, Puzhuthivakkam'},
+ 'Ramapuram': {'Thiruvalluvar Salai, Ramapuram'},
+ 'Rd': {'80 Feet Rd',
+        'Arcot Rd',
+        'Arya Gowda Rd',
+        'Jawaharlal Nehru Rd',
+        'Kalakshethra Rd',
+        'Kasturibai Nagar 1st Main Rd',
+        'Kodambakkam Rd',
+        'LIC Colony Main Rd',
+        'Mahatma Gandhi Rd',
+        'Ramapuram Main Rd',
+        'Rangarajapuram Main Rd',
+        'Thanikachalam Rd',
+        'Valluvar Rd',
+        'Viswanathapuram Main Rd'},
+ 'Road)': {'Anna Salai (Mount Road)',
+           'Jawaharlal Nehru Road (100 Feet Road)',
+           'Pasumpon Muthuramalingar Thevar Salai (Chamiers Road)'},
+ 'Road,Periyapet,': {'suyavar veedhi, ,East Jones Road,Periyapet,'},
+ 'SALAI': {'THIRUVALLUVAR SALAI'},
+ 'SH49': {'East Coast Road SH49'},
+ 'ST': {'MANICKKAM ST'},
+ 'STREET': {'MANICKKAM STREET', 'DHATIRATNAM STREET'},
+ 'Saidapet': {'Anjaneya Temple Street, Saidapet',
+              'Anna Salai, Saidapet',
+              'E Block, Venkatapuram, Saidapet',
+              'Nagapattinam-Chennai Highway, NGR Colony, Gotha Medu Housing '
+              'Board, Saidapet, NGR Colony, Gotha Medu Housing Board, West '
+              'Saidapet',
+              'PWD Govt. Staff Qtrs, Todd Hunter Nagar, Saidapet',
+              'West Jones Road, Saidapet'},
+ 'Salai': {'Anna Salai',
+           'Doctor Radhakrishnan Salai',
+           'Dr Muthulakshmi Salai',
+           'Erikarai Salai',
+           'Justice Ramakrishna Salai',
+           'Kamarajar Salai',
+           'Munusamy Salai',
+           'Pasumpon Muthuramalingar Thever Salai',
+           'Ponnambalam Salai',
+           'Rajiv Gandhi Salai',
+           'valluvar Salai'},
+ 'St': {'12th St',
+        '16th Cross St',
+        '46th St',
+        '53rd St',
+        '54th St',
+        'Abusali St',
+        'Chakrapani St',
+        'Jayaram St',
+        'Rengabashyam St',
+        'Shastri Nagar 1st Cross St',
+        'Venu Reddy St',
+        'brindavan St'},
+ 'St.': {'Sivagnanam St.', 'Deena Dyalu St.'},
+ 'Stage': {'6th cross ,29th main, BTM Layout 2nd Stage'},
+ 'T-Nagar': {'North Boag Road, T-Nagar'},
+ 'Taramani': {'100 Feet Road, Taramani',
+              '2nd Main Road, Taramani',
+              'Kanagam road, Taramani',
+              'Taramani'},
+ 'Teynampet': {'Muthaiyah Street, Vellala Teynampet'},
+ 'Thiruvanmiyu': {'Anand Apartments, 50, Dr Muthu Lakshmi Rd, L.I.C Colony, '
+                  'Thiruvanmiyu'},
+ 'Thiruvanmiyur': {'48th Cross St Valmiki Nagar, Thiruvalluvar Nagar, '
+                   'Thiruvanmiyur',
+                   'Dr.VSI Estate, Thiruvanmiyur'},
+ 'Tiruvanmiyur': {'East Coast Road, Tiruvanmiyur'},
+ 'University': {'Thamarai Hostel , Anna University'},
+ 'Vadapalani': {'Police Quarters (Inspectors, Sub-inspectors), South Sivan '
+                'Koil Street, Vadapalani'},
+ 'Valasaravakkam': {'Arcot Road, Valasaravakkam'},
+ 'Velachery': {'7th Avenue, Thandeeswaram Nagar, Velachery',
+               'Velachery',
+               'Vijaya Nagar 3rd Cross Street, Velachery'},
+ 'Velachery,': {"4th Main Road, Chokkalingam Nagar, AG'S Colony, Velachery, "
+                'MGR Nagar, Venkateswara Nagar, Velachery,'},
+ 'Village': {'Dr.Seetharaman Nagar,Velacherry Village'},
+ 'West': {'Brindavan Nagar, Velachery West'},
+ 'as': {'as'},
+ 'campus': {'sardar patel road anna university ceg campus'},
+ 'colony': {'6th street,voltas colony'},
+ 'mainroad': {'vijayanagar 3rd mainroad'},
+ 'manapakkam': {'manapakkam'},
+ 'manthagudipatty': {'manthagudipatty'},
+ 'nagar': {'2nd main road, sadasivam nagar',
+           '7th Cross Street, Rajalaksmi nagar',
+           'I Avenue Indira nagar',
+           'Nehru nagar',
+           'sriram nagar'},
+ 'quarters': {'Teynampet police quarters'},
+ 'road': {'1st main road',
+          'Church road',
+          'Gulmohar Avenue, velachery main road',
+          'South boag road',
+          'dandeeswaram main road',
+          'mahalakshmi nagar 3rd main road',
+          'sardar patel road'},
+ 'road)': {'Maharajapuram Santhanam Salai (Griffith road)'},
+ 'sou': {'sou'},
+ 'st': {'kalasathamman koil st', 'Babu rajendra prasath st', 'sivaraman st'},
+ 'street': {'2nd street',
+            '3rd cross street',
+            'Balakrishnapuram 6th street',
+            'Bazzar street',
+            'Brahmin street',
+            'Vadhyar Subbraya mudali street',
+            'fourth cross street',
+            'kalasathamman koil street',
+            'kannnapiran street',
+            'vaithiyanathan street'}}
+===== Cleaned Data post updates, eg. changing of local names like Salai ==> Road etc. =====
+80 Feet Rd => 80 Feet Road
+Arya Gowda Rd => Arya Gowda Road
+Ramapuram Main Rd => Ramapuram Main Road
+Rangarajapuram Main Rd => Rangarajapuram Main Road
+Kalakshethra Rd => Kalakshethra Road
+LIC Colony Main Rd => LIC Colony Main Road
+Mahatma Gandhi Rd => Mahatma Gandhi Road
+Valluvar Rd => Valluvar Road
+Arcot Rd => Arcot Road
+Thanikachalam Rd => Thanikachalam Road
+Viswanathapuram Main Rd => Viswanathapuram Main Road
+Kasturibai Nagar 1st Main Rd => Kasturibai Nagar 1st Main Road
+Jawaharlal Nehru Rd => Jawaharlal Nehru Road
+Kodambakkam Rd => Kodambakkam Road
+kalasathamman koil st => kalasathamman koil Street
+Babu rajendra prasath st => Babu rajendra prasath Street
+sivaraman st => sivaraman Street
+Parthasarathy St, Arulayiammanpet, Thiru Vi Ka Industrial Estate, Guindy => Parthasarathy St, Arulayiammanpet, Thiru Vi Ka Industrial Estate, Guindy
+Five furlong road, Maduvankarai, Guindy => Five furlong road, Maduvankarai, Guindy
+Sengani Amman Koil St, Mosque Colony, Maduvinkarai, Guindy => Sengani Amman Koil St, Mosque Colony, Maduvinkarai, Guindy
+Defence Officers Colony Nandambakkam Extension Guindy => Defence Officers Colony Nandambakkam Extension Guindy
+Sardar Patel Rd, Little Mount, Guindy => Sardar Patel Rd, Little Mount, Guindy
+PERUNGUDI => PERUNGUDI
+Jawaharlal Nehru Street, Ashok Nagar => Jawaharlal Nehru Street, Ashok Nagar
+92nd St, 18th avenue, Ashok Nagar => 92nd St, 18th avenue, Ashok Nagar
+Veerappa Nagar => Veerappa Nagar
+K.P.K. Salai, Kanaga Durgai Nagar => K.P.K. Salai, Kanaga Durgai Nagar
+Dr.Seetharaman Nagar => Dr.Seetharaman Nagar
+11th Avenue, Ashok Nagar => 11th Avenue, Ashok Nagar
+opp. Hotel Saravana Bhavan,Anna Main Road, K K Nagar => opp. Hotel Saravana Bhavan,Anna Main Road, K K Nagar
+Mathias Nagar => Mathias Nagar
+Sivagnanam Street, T Nagar => Sivagnanam Street, T Nagar
+46th Street, Lakshmi Nagar => 46th Street, Lakshmi Nagar
+7th Cross Street, Rajalaksmi nagar => 7th Cross Street, Rajalaksmi nagar
+I Avenue Indira nagar => I Avenue Indira nagar
+Nehru nagar => Nehru nagar
+sriram nagar => sriram nagar
+2nd main road, sadasivam nagar => 2nd main road, sadasivam nagar
+West Jones Road, Saidapet => West Jones Road, Saidapet
+Anjaneya Temple Street, Saidapet => Anjaneya Temple Street, Saidapet
+Nagapattinam-Chennai Highway, NGR Colony, Gotha Medu Housing Board, Saidapet, NGR Colony, Gotha Medu Housing Board, West Saidapet => Nagapattinam-Chennai Highway, NGR Colony, Gotha Medu Housing Board, Saidapet, NGR Colony, Gotha Medu Housing Board, West Saidapet
+PWD Govt. Staff Qtrs, Todd Hunter Nagar, Saidapet => PWD Govt. Staff Qtrs, Todd Hunter Nagar, Saidapet
+E Block, Venkatapuram, Saidapet => E Block, Venkatapuram, Saidapet
+Anna Salai, Saidapet => Anna Salai, Saidapet
+Dr.Seetharaman Nagar,Velacherry Village => Dr.Seetharaman Nagar,Velacherry Village
+4th Main Road, Nanganallur => 4th Main Road, Nanganallur
+6th Main Road, Nanganallur => 6th Main Road, Nanganallur
+Nanganallur => Nanganallur
+Kamatchipuram 2nd Street Extension => Kamatchipuram 2nd Street Extension
+sardar patel road => sardar patel road
+mahalakshmi nagar 3rd main road => mahalakshmi nagar 3rd main road
+Gulmohar Avenue, velachery main road => Gulmohar Avenue, velachery main road
+dandeeswaram main road => dandeeswaram main road
+South boag road => South boag road
+1st main road => 1st main road
+Church road => Church road
+Kanagam road, Taramani => Kanagam road, Taramani
+Taramani => Taramani
+100 Feet Road, Taramani => 100 Feet Road, Taramani
+2nd Main Road, Taramani => 2nd Main Road, Taramani
+7th Avenue, Thandeeswaram Nagar, Velachery => 7th Avenue, Thandeeswaram Nagar, Velachery
+Velachery => Velachery
+Vijaya Nagar 3rd Cross Street, Velachery => Vijaya Nagar 3rd Cross Street, Velachery
+Meenambakkam => Meenambakkam
+Karumariamman Koil St, Poonthottam Colony, Nandambakkam => Karumariamman Koil St, Poonthottam Colony, Nandambakkam
+Doctor Radhakrishnan Salai => Doctor Radhakrishnan Road
+Erikarai Salai => Erikarai Road
+Pasumpon Muthuramalingar Thever Salai => Pasumpon Muthuramalingar Thever Road
+Anna Salai => Anna Road
+Justice Ramakrishna Salai => Justice Ramakrishna Road
+Munusamy Salai => Munusamy Road
+valluvar Salai => valluvar Road
+Ponnambalam Salai => Ponnambalam Road
+Rajiv Gandhi Salai => Rajiv Gandhi Road
+Dr Muthulakshmi Salai => Dr Muthulakshmi Road
+Kamarajar Salai => Kamarajar Road
+Kavingar Barathidasan Road, Alwarpet => Kavingar Barathidasan Road, Alwarpet
+Alwarpet => Alwarpet
+Anna Salai (Mount Road) => Anna Salai (Mount Road)
+Pasumpon Muthuramalingar Thevar Salai (Chamiers Road) => Pasumpon Muthuramalingar Thevar Salai (Chamiers Road)
+Jawaharlal Nehru Road (100 Feet Road) => Jawaharlal Nehru Road (100 Feet Road)
+Mount Poonamallee Highway => Mount Poonamallee Highway
+Mugalivakkam => Mugalivakkam
+Sivagnanam St. => Sivagnanam St.
+Deena Dyalu St. => Deena Dyalu St.
+Jawaharlal Nehru Rd, Balaji Nagar, Ekkatuthangal => Jawaharlal Nehru Rd, Balaji Nagar, Ekkatuthangal
+Bazzar street => Bazzar Street
+Brahmin street => Brahmin Street
+kalasathamman koil street => kalasathamman koil Street
+kannnapiran street => kannnapiran Street
+3rd cross street => 3rd cross Street
+fourth cross street => fourth cross Street
+vaithiyanathan street => vaithiyanathan Street
+Vadhyar Subbraya mudali street => Vadhyar Subbraya mudali Street
+2nd street => 2nd Street
+Balakrishnapuram 6th street => Balakrishnapuram 6th Street
+Chakrapani St => Chakrapani Street
+54th St => 54th Street
+Shastri Nagar 1st Cross St => Shastri Nagar 1st Cross Street
+Abusali St => Abusali Street
+Venu Reddy St => Venu Reddy Street
+12th St => 12th Street
+46th St => 46th Street
+16th Cross St => 16th Cross Street
+Rengabashyam St => Rengabashyam Street
+53rd St => 53rd Street
+brindavan St => brindavan Street
+Jayaram St => Jayaram Street
+14th Ave => 14th Avenue
+Alumni Ave => Alumni Avenue
+Indira Nagar 1st Ave => Indira Nagar 1st Avenue
+8th Ave => 8th Avenue
+Hostel Ave => Hostel Avenue
+5th Cross Street, Govindsamay Nagar, Madipakkam => 5th Cross Street, Govindsamay Nagar, Madipakkam
+48th Cross St Valmiki Nagar, Thiruvalluvar Nagar, Thiruvanmiyur => 48th Cross St Valmiki Nagar, Thiruvalluvar Nagar, Thiruvanmiyur
+Dr.VSI Estate, Thiruvanmiyur => Dr.VSI Estate, Thiruvanmiyur
+Thamarai Hostel , Anna University => Thamarai Hostel , Anna University
+Govindasami St, MGR Nagar, Nesapakkam => Govindasami St, MGR Nagar, Nesapakkam
+Maduvankarai Bridge => Maduvankarai Bridge
+MANICKKAM STREET => MANICKKAM STREET
+DHATIRATNAM STREET => DHATIRATNAM STREET
+J.N.ROAD => J.N.ROAD
+New Street, Kotturpuram => New Street, Kotturpuram
+Canal Bank Road, CIT Nagar East => Canal Bank Road, CIT Nagar East
+Mahatma Gandhi Rd, Subramaniam Colony, Adyar => Mahatma Gandhi Rd, Subramaniam Colony, Adyar
+1st Canal Cross Road, Gandhi Nagar, Adyar, Gandhi Nagar, Adyar => 1st Canal Cross Road, Gandhi Nagar, Adyar, Gandhi Nagar, Adyar
+11th Cross Street, Shastri Nagar, Adyar => 11th Cross Street, Shastri Nagar, Adyar
+2nd Avenue, Indira Nagar, Adyar => 2nd Avenue, Indira Nagar, Adyar
+4th Main Road, Gandhi Nagar, Adyar => 4th Main Road, Gandhi Nagar, Adyar
+Gandhi Mandapam, Sardar Patel Road, Adyar => Gandhi Mandapam, Sardar Patel Road, Adyar
+Indira Nagar 1st Main Rd, Indira Nagar, Adyar => Indira Nagar 1st Main Rd, Indira Nagar, Adyar
+2nd Avenue, Indira Nagar, Adyar, Chennai - 600, 020, Indira Nagar, Adyar => 2nd Avenue, Indira Nagar, Adyar, Chennai - 600, 020, Indira Nagar, Adyar
+Brindavan Nagar, Velachery West => Brindavan Nagar, Velachery West
+East Coast Road, Tiruvanmiyur => East Coast Road, Tiruvanmiyur
+Muthaiyah Street, Vellala Teynampet => Muthaiyah Street, Vellala Teynampet
+North Boag Road, T-Nagar => North Boag Road, T-Nagar
+Turnbulls Road, Nandanam => Turnbulls Road, Nandanam
+Warren Road, Mylapore => Warren Road, Mylapore
+Police Quarters (Inspectors, Sub-inspectors), South Sivan Koil Street, Vadapalani => Police Quarters (Inspectors, Sub-inspectors), South Sivan Koil Street, Vadapalani
+Teynampet police quarters => Teynampet police quarters
+3rd Avenue, Ashok Nagar (Pudur) => 3rd Avenue, Ashok Nagar (Pudur)
+Nakkeeran St #8, West Mambalam => Nakkeeran St #8, West Mambalam
+Bakthavachalam Street, West Mambalam => Bakthavachalam Street, West Mambalam
+New Street, West Mambalam => New Street, West Mambalam
+Third Street, Raghavan Colony, Jafferkhanpet => Third Street, Raghavan Colony, Jafferkhanpet
+6th street,voltas colony => 6th street,voltas colony
+manapakkam => manapakkam
+vijayanagar 3rd mainroad => vijayanagar 3rd mainroad
+6th cross ,29th main, BTM Layout 2nd Stage => 6th cross ,29th main, BTM Layout 2nd Stage
+Velachery Road, Velachery, Chennai => Velachery Road, Velachery, Chennai
+3rd St, Ragavan Colony, Mettuppalayam, Ashok Nagar, Chennai => 3rd St, Ragavan Colony, Mettuppalayam, Ashok Nagar, Chennai
+Balu St, Kamaraj Nagar, Thiruvanmiyur, Chennai => Balu St, Kamaraj Nagar, Thiruvanmiyur, Chennai
+Vandikaran St, Kuilkuppam, Velachery, Chennai => Vandikaran St, Kuilkuppam, Velachery, Chennai
+Gandhi Nagar, MGR Nagar, Venkateswara Nagar, Velachery, Chennai => Gandhi Nagar, MGR Nagar, Venkateswara Nagar, Velachery, Chennai
+Baby Nagar, Velachery, Chennai, Tamil Nadu 600042 => Baby Nagar, Velachery, Chennai, Tamil Nadu 600042
+4th Main Road, Chokkalingam Nagar, AG'S Colony, Velachery, MGR Nagar, Venkateswara Nagar, Velachery, => 4th Main Road, Chokkalingam Nagar, AG'S Colony, Velachery, MGR Nagar, Venkateswara Nagar, Velachery,
+Anand Apartments, 50, Dr Muthu Lakshmi Rd, L.I.C Colony, Thiruvanmiyu => Anand Apartments, 50, Dr Muthu Lakshmi Rd, L.I.C Colony, Thiruvanmiyu
+Kalakshetra Rd, Valluvar Nagar, Thiruvanmiyur, Chennai, Tamil Nadu => Kalakshetra Rd, Valluvar Nagar, Thiruvanmiyur, Chennai, Tamil Nadu
+4th Main Road, Kasthuriba Nagar, Adyar, Kasturba Nagar, Adyar, => 4th Main Road, Kasthuriba Nagar, Adyar, Kasturba Nagar, Adyar,
+City Link Road, N.G.O. Colony, Ganesh Nagar, Adambakkam => City Link Road, N.G.O. Colony, Ganesh Nagar, Adambakkam
+Panagal Park => Panagal Park
+sardar patel road anna university ceg campus => sardar patel road anna university ceg campus
+manthagudipatty => manthagudipatty
+THIRUVALLUVAR SALAI => THIRUVALLUVAR SALAI
+10th street Ram nagar north extn, Puzhithivakkam => 10th street Ram nagar north extn, Puzhithivakkam
+10th Street, Ram  Nagar, Puzhuthivakkam => 10th Street, Ram  Nagar, Puzhuthivakkam
+MANICKKAM ST => MANICKKAM ST
+Thiruvalluvar Salai, Ramapuram => Thiruvalluvar Salai, Ramapuram
+St. Thomas Mount => St. Thomas Mount
+as => as
+6th Main Road Ram Nagar (N) Extn => 6th Main Road Ram Nagar (N) Extn
+Nathan Subramaniam Colony => Nathan Subramaniam Colony
+Arcot Road, Valasaravakkam => Arcot Road, Valasaravakkam
+sou => sou
+Umapathy street Extn. => Umapathy street Extn.
+suyavar veedhi, ,East Jones Road,Periyapet, => suyavar veedhi, ,East Jones Road,Periyapet,
+East Coast Road SH49 => East Coast Road SH49
+Maharajapuram Santhanam Salai (Griffith road) => Maharajapuram Santhanam Salai (Griffith road)
+
+Process finished with exit code 0
